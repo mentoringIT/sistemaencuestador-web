@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Context-Type" content="text/html charset-UTF-8" />
+	<!-- 	<h:outputStylesheet name="./css/cssFormulario.css" /> -->
+	<!-- 	<h:outputStylesheet name="./css/cssLayout.css" /> -->
+	<title>Sistema de encuestas MentoringIT</title>
+	<link rel="stylesheet" href="/sistemaencuestadorweb/css/cssLayout.css" />
+</h:head>
+<h:body>
+		
+<!-- 		<div class="general"> -->
+<!-- 			<div class="menu"></div> -->
+<!-- 			<div class="contenedor"> -->
+<!-- 				<ui:insert name="contenedor"></ui:insert> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+
+<!-- 		<div id="preguntas"> -->
+<!-- 			<ui:insert name="preguntas"></ui:insert> -->
+<!-- 		</div> -->
+
+		<!-- 	<div class="footer"> -->
+		<!-- 		<ui:insert name="footer">&copy; 2017 MentoringIT</ui:insert> -->
+		<!-- 	</div> -->
+
+	<div class="ui-g">
+		<div class="ui-g-12 ui-md-2">
+			<ui:insert name="menu"></ui:insert>
+			<h:form style="width:400px">
+				<p:panelMenu style="width:190px">
+					<p:submenu label="Home" icon="ui-icon-home">
+						<p:menuitem value="Inicio" outcome="welcome.xhtml"
+							icon="ui-icon-home" />
+						<p:menuitem value="Salir" outcome="index.xhtml" icon="delete" />
+					</p:submenu>
+
+					<p:submenu label="Administración" icon="ui-icon-pencil">
+						<p:menuitem value="Crear Encuestas" outcome="crearEncuestas.xhtml"
+							icon="ui-icon-pencil" />
+						<p:menuitem value="Crear Preguntas" outcome="crearPreguntas.xhtml"
+							icon="ui-icon-pencil" />
+					</p:submenu>
+
+					<f:facet name="options">
+						<p:inputText style="margin-right:10px" placeholder="buscar" />
+						<p:commandButton type="button" value="Logout"
+							icon="ui-icon-extlink" />
+					</f:facet>
+				</p:panelMenu>
+			</h:form>
+		</div>
+		<div id="header" class="ui-g-12 ui-md-10 ui-g-nopad">
+		
+			<div class="ui-g-12">
+			<ui:insert name="cabecera"></ui:insert>
+			<div class="ui-g-6 ui-md-1">
+					<p:graphicImage name="/sistemaencuestadorweb/imagenes/logo.jpg"
+						style="width:100%" />
+				</div>
+			</div>
+			
+			<div class="ui-g-12 ui-g-nopad">
+			<ui:insert name="contenedor"></ui:insert>
+			</div>
+
+		</div>
+		
+		<div class="ui-g-12">Footer
+		<ui:insert name="footer"></ui:insert>
+		</div>
+		
+	</div>
+</h:body>
+
+</html>

@@ -1,0 +1,22 @@
+body
+{
+    background-color:white;
+    font-size: 12px;
+    font-family:"Verdana CE", Arial, sans-serif;
+    color: black;
+    margin: 10px;
+}
+.center{
+	margin: auto;
+	width: 50%;
+	padding: 10% 0;
+}
+
+.password{
+	font-family: "Verdana CE", Arial, sans-serif;
+	border-bottom: 1px solid #AFAFAF;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+
