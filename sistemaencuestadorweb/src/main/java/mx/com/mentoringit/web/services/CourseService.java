@@ -4,27 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import mx.com.mentoringit.model.dao.CourseDAO;
-import mx.com.mentoringit.model.dao.RegistrationDAO;
 import mx.com.mentoringit.model.dto.CourseDTO;
-import mx.com.mentoringit.model.dto.StudentDTO;
+
 
 @Service
 public class CourseService implements ICourseService {
 	
 	private CourseDAO courseDAO;
-	private RegistrationDAO regDAO;
-	
-
-	public RegistrationDAO getRegDAO() {
-		return regDAO;
-	}
-
-	@Autowired
-	public void setRegDAO(RegistrationDAO regDAO) {
-		this.regDAO = regDAO;
-	}
 
 	public CourseDAO getCourseDAO() {
 		return courseDAO;
@@ -40,10 +27,7 @@ public class CourseService implements ICourseService {
 		return courseDAO.select() ;
 	}
 
-	@Override
-	public List<StudentDTO> student(Integer id) throws Exception {
-		return regDAO.select(id);
-	}
+	
 
 	
 }

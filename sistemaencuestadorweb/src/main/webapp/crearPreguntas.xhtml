@@ -13,20 +13,73 @@
 		<ui:define name="contenedor">
 			<h:form>
 				<p:panel header="creación de preguntas" styleClass="contenedor">
-					<h:panelGrid columns="2" >
-						<p:outputLabel for="respuestas" value="Tipo de pregunta" />
-						<p:selectOneRadio id="respuestas" value="Tipo de pregunta">
-							<f:selectItem itemLabel="Respuesta única" itemValue="Respuesta única" />
-							<f:selectItem itemLabel="Respuesta múltiple" itemValue="Respuesta múltiple" />
-						</p:selectOneRadio>
-					</h:panelGrid>
+					<h:panelGrid columns="2">
+					<p:commandButton id="punica" value="Crear pregunta Única" action="punica"/>
+					<p:commandButton id="pemultiple"  value="Crear pregunta Múltiple" action="pmultiple"/>
+					<div>
+					<h:form>
+					<p:outputLabel value="preguntas existentes"></p:outputLabel>
+					</h:form>
+					</div>
+<!-- 						<p:outputLabel value="Tipo de pregunta" /> -->
+<!-- 						<p:separator /> -->
+<!-- 												<p:selectOneRadio  value="Tipo de pregunta"> -->
+<!-- 													<f:selectItem itemLabel="Respuesta única" -->
+<!-- 														itemValue="Respuesta única" onchange="javascript:showContent()" /> -->
+<!-- 													<f:selectItem itemLabel="Respuesta múltiple" -->
+<!-- 														itemValue="Respuesta múltiple" /> -->
+<!-- 												</p:selectOneRadio> -->
+<!-- 						<div> -->
+<!-- 							pregunta única <input type="checkbox" name="check" id="check" -->
+<!-- 								value="1" onchange="javascript:showContent()" /> -->
 
-				</p:panel>
-			</h:form>
+
+<!-- 							<div id="content" style="display: none;"> -->
+<!-- 								contenido del div escondido<br /> -->
+<!-- 								<imput type="text"></imput> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 						<p:separator /> -->
+<!-- 						<div> -->
+<!-- 							pregunta múltiple <input type="checkbox" name="check1" -->
+<!-- 								id="check1" value="1" onchange="javascript:showContent1()" /> -->
+<!-- 							<div id="content1" style="display: none;"> -->
+<!-- 								contenido del div escondido1<br /> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+ 					</h:panelGrid> 
+ 				</p:panel> 
+			</h:form> 
+<!-- 			<script type="text/javascript"> -->
+// 				//<![CDATA[
+// 				function showContent() {
+// 					element = document.getElementById("content");
+// 					check = document.getElementById("check");
+// 					if (check.checked) {
+// 						element.style.display = 'block';
+// 					} else {
+// 						element.style.display = 'none';
+// 					}
+// 				}
+// 				//]]>
+<!-- 			</script> -->
+
+<!-- 			<script type="text/javascript"> -->
+// 				//<![CDATA[
+// 				function showContent1() {
+// 					element = document.getElementById("content1");
+// 					check1 = document.getElementById("check1");
+// 					if (check1.checked) {
+// 						element.style.display = 'block';
+// 					} else {
+// 						element.style.display = 'none';
+// 					}
+// 				}
+// 				//]]>
+<!-- 			</script> -->
+
+
 		</ui:define>
-
-
-
 	</ui:composition>
 </h:body>
 

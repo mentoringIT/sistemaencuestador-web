@@ -11,22 +11,6 @@
 	<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
 		template=" plantilla.xhtml">
 		<ui:define name="contenedor">
-			<h:form>
-				<p:panel header="creación de encuestas" styleClass="contenedor">
-					<h:panelGrid>
-						<p:outputLabel value="Curso" />
-						<p:selectOneMenu id="course"
-							filter="true" filterMatchMode="contains" height="100" wigth="50">
-
-							<f:selectItem itemLabel="--Seleccione Curso--" itemValue="0" />
-							<f:selectItems value="#{CourseList.listaC}" var="c"
-								itemValue="#{c.id}" itemLabel="#{c.name}" />
-						</p:selectOneMenu>
-
-					</h:panelGrid>
-
-				</p:panel>
-			</h:form>
 		</ui:define>
 	</ui:composition>
 </h:body>

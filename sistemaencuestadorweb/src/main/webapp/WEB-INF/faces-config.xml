@@ -13,14 +13,13 @@
 			<value>#{userService}</value>
 		</managed-property>
 	</managed-bean>
-	
 	<managed-bean>
-		<managed-bean-name>StudentList</managed-bean-name>
-		<managed-bean-class>mx.com.mentoringit.web.beans.StudentBean</managed-bean-class>
+		<managed-bean-name>CourseList</managed-bean-name>
+		<managed-bean-class>mx.com.mentoringit.web.beans.CourseBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 		<managed-property>
-			<property-name>studentService</property-name>
-			<value>#{studentService}</value>
+			<property-name>courseService</property-name>
+			<value>#{courseService}</value>
 		</managed-property>
 	</managed-bean>
 
@@ -38,45 +37,22 @@
 			<from-outcome>index</from-outcome>
 			<to-view-id>index.xhtml</to-view-id>
 		</navigation-case>
-
 	</navigation-rule>
 	
 	<navigation-rule>
-		<from-view-id>menuPrincipal.xhtml</from-view-id>
+		<from-view-id>crearPreguntas.xhtml</from-view-id>
 		<navigation-case>
-			<from-outcome>students</from-outcome>
-			<to-view-id>menuAlumnos.xhtml</to-view-id>
+			<from-outcome>punica</from-outcome>
+			<to-view-id>preguntaUnica.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>pmultiple</from-outcome>
+			<to-view-id>preguntamultiple.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
-	<navigation-rule>
-		<from-view-id>menuAlumnos.xhtml</from-view-id>
-		<navigation-case>
-			<from-outcome>make</from-outcome>
-			<to-view-id>realizarPagoAlumnos.xhtml</to-view-id>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>search</from-outcome>
-			<to-view-id>buscarPagoAlumnos.xhtml</to-view-id>
-		</navigation-case>
-	</navigation-rule>
-	
-	<navigation-rule>
-		<from-view-id>realizarPagoAlumnos.xhtml</from-view-id>
-		<navigation-case>
-			<from-outcome>existing</from-outcome>
-			<to-view-id>pagoAlumnoExistente.xhtml</to-view-id>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>new</from-outcome>
-			<to-view-id>pagoAlumnoNuevo.xhtml</to-view-id>
-		</navigation-case>
-	</navigation-rule>
-	
-	
-	
-	
 	<application>
+	
+	
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 	</application>
 
