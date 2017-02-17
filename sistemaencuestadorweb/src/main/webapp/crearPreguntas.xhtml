@@ -14,44 +14,105 @@
 			<h:form>
 				<p:panel header="creación de preguntas" styleClass="contenedor">
 					<h:panelGrid columns="2">
-					<p:commandButton id="punica" value="Crear pregunta Única" action="punica"/>
-					<p:commandButton id="pemultiple"  value="Crear pregunta Múltiple" action="pmultiple"/>
-					<div>
-					<h:form>
-					<p:outputLabel value="preguntas existentes"></p:outputLabel>
-					</h:form>
-					</div>
-<!-- 						<p:outputLabel value="Tipo de pregunta" /> -->
-<!-- 						<p:separator /> -->
-<!-- 												<p:selectOneRadio  value="Tipo de pregunta"> -->
-<!-- 													<f:selectItem itemLabel="Respuesta única" -->
-<!-- 														itemValue="Respuesta única" onchange="javascript:showContent()" /> -->
-<!-- 													<f:selectItem itemLabel="Respuesta múltiple" -->
-<!-- 														itemValue="Respuesta múltiple" /> -->
-<!-- 												</p:selectOneRadio> -->
-<!-- 						<div> -->
-<!-- 							pregunta única <input type="checkbox" name="check" id="check" -->
-<!-- 								value="1" onchange="javascript:showContent()" /> -->
+						<!-- 						<p:commandButton id="punica" value="Crear pregunta Única" -->
+						<!-- 							action="preguntaUnica.xhtml" /> -->
+						<!-- 						<p:commandButton id="pemultiple" value="Crear pregunta Múltiple" -->
+						<!-- 							action="preguntamultiple.xhtml" /> -->
+						<div>
+							<h:form>
+								<p:outputLabel value="preguntas existentes"></p:outputLabel>
+								<p:commandButton id="editar" value="Editar"
+									action="#" />
+								<p:commandButton id="eliminar" value="Eliminar"
+									action="#" />
+							</h:form>
+						</div>
+						<p:outputLabel value="Tipo de pregunta" />
+						<p:separator />
+						<br />
+						<p:selectOneRadio value="Tipo de pregunta">
+							<f:selectItem itemLabel="Respuesta única"
+								itemValue="Respuesta única" />
+							<f:selectItem itemLabel="Respuesta múltiple"
+								itemValue="Respuesta múltiple" />
+						</p:selectOneRadio>
+						<br />
+						<p:separator />
+						<br />
+						<h:outputLabel for="punica" value="Redacta tu pregunta" />
+						<p:inputText id="punica" required="true" />
+						<p:separator />
+						<br />
+						<h:outputLabel for="punica"
+							value="escribe las posibles respuestas" />
+						<table>
+							<!-- 							<tr> -->
+							<!-- 								<th rowspan="4"><p:selectOneRadio layout="pageDirection" -->
+							<!-- 										 id="selectOneRadio"> -->
+							<!-- 										<f:selectItem itemValue="r1" itemLabel="1" /> -->
+							<!-- 										<f:selectItem itemValue="r2" itemLabel="2" /> -->
+							<!-- 										<f:selectItem itemValue="r3" itemLabel="3" /> -->
+							<!-- 										<f:selectItem itemValue="r4" itemLabel="4" /> -->
+							<!-- 									</p:selectOneRadio></th> -->
+							<!-- 								<td><p:inputText /></td> -->
+							<!-- 							</tr> -->
+							<tr>
+								<td><p:inputText /></td>
+							</tr>
+							<tr>
+								<td><p:inputText /></td>
+							</tr>
+							<tr>
+								<td><p:inputText /></td>
+							</tr>
+							<tr>
+								<td><p:inputText /></td>
+							</tr>
+						</table>
+						<p:separator />
+						<br />
+						<h:outputLabel for="punica" value="habilitar detalle" />
+						<br />
+						<table>
+							<tr>
+								<th rowspan="1"><p:selectOneRadio name="rad"
+										onclick="pepe.disabled = false">
+										<br />
+										<f:selectItem />
+									</p:selectOneRadio></th>
+							</tr>
+							<tr>
+								<td><p:inputText name="pepe" disabled="disabled" /></td>
+							</tr>
+						</table>
+						<br />
+						<!-- 						<input type="radio" name="rad" onclick="pepe.disabled = false" /> -->
+						<!-- 						<input type="text" name="pepe" disabled="disabled" /> -->
+						<p:commandButton id="guardarPregunta" value="Guardar" />
+
+						<!-- 						<div> -->
+						<!-- 							pregunta única <input type="checkbox" name="check" id="check" -->
+						<!-- 								value="1" onchange="javascript:showContent()" /> -->
 
 
-<!-- 							<div id="content" style="display: none;"> -->
-<!-- 								contenido del div escondido<br /> -->
-<!-- 								<imput type="text"></imput> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 						<p:separator /> -->
-<!-- 						<div> -->
-<!-- 							pregunta múltiple <input type="checkbox" name="check1" -->
-<!-- 								id="check1" value="1" onchange="javascript:showContent1()" /> -->
-<!-- 							<div id="content1" style="display: none;"> -->
-<!-- 								contenido del div escondido1<br /> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
- 					</h:panelGrid> 
- 				</p:panel> 
-			</h:form> 
-<!-- 			<script type="text/javascript"> -->
-// 				//<![CDATA[
+						<!-- 							<div id="content" style="display: none;"> -->
+						<!-- 								contenido del div escondido<br /> -->
+						<!-- 								<imput type="text"></imput> -->
+						<!-- 							</div> -->
+						<!-- 						</div> -->
+						<!-- 						<p:separator /> -->
+						<!-- 						<div> -->
+						<!-- 							pregunta múltiple <input type="checkbox" name="check1" -->
+						<!-- 								id="check1" value="1" onchange="javascript:showContent1()" /> -->
+						<!-- 							<div id="content1" style="display: none;"> -->
+						<!-- 								contenido del div escondido1<br /> -->
+						<!-- 							</div> -->
+						<!-- 						</div> -->
+					</h:panelGrid>
+				</p:panel>
+			</h:form>
+			<!-- 			<script type="text/javascript"> -->
+			<![CDATA[
 // 				function showContent() {
 // 					element = document.getElementById("content");
 // 					check = document.getElementById("check");
@@ -61,11 +122,11 @@
 // 						element.style.display = 'none';
 // 					}
 // 				}
-// 				//]]>
-<!-- 			</script> -->
+ 				]]>
+			<!-- 			</script> -->
 
-<!-- 			<script type="text/javascript"> -->
-// 				//<![CDATA[
+			<!-- 			<script type="text/javascript"> -->
+			<![CDATA[
 // 				function showContent1() {
 // 					element = document.getElementById("content1");
 // 					check1 = document.getElementById("check1");
@@ -75,8 +136,8 @@
 // 						element.style.display = 'none';
 // 					}
 // 				}
-// 				//]]>
-<!-- 			</script> -->
+ 				]]>
+			<!-- 			</script> -->
 
 
 		</ui:define>

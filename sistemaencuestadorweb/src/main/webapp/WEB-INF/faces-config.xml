@@ -38,20 +38,7 @@
 			<to-view-id>index.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
-	<navigation-rule>
-		<from-view-id>crearPreguntas.xhtml</from-view-id>
-		<navigation-case>
-			<from-outcome>punica</from-outcome>
-			<to-view-id>preguntaUnica.xhtml</to-view-id>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>pmultiple</from-outcome>
-			<to-view-id>preguntamultiple.xhtml</to-view-id>
-		</navigation-case>
-	</navigation-rule>
-	<application>
-	
+<application> 	
 	
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 	</application>

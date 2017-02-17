@@ -5,8 +5,8 @@
   <nodes xsi:type="pageflow:PFPage" name="inicioFail.xhtml" id="pf14860703162706" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14860703162703" path="inicioFail.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf14860703162707" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14860703162704" path="index.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="crearPreguntas.xhtml" id="pf14872827163380" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14872827163391 pf14872829164225" path="crearPreguntas.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="preguntaUnica.xhtml" id="pf14872827163393" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14872827163391" path="preguntaUnica.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="preguntamultiple.xhtml" id="pf14872829164226" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" inlinks="pf14872829164225" path="preguntamultiple.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="preguntaUnica.xhtml" id="pf14872827163393" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14872827163391" path="/preguntaUnica.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="preguntamultiple.xhtml" id="pf14872829164226" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" inlinks="pf14872829164225" path="/preguntamultiple.xhtml"/>
   <links id="pf14860703162702" target="pf14860703162705" source="pf148502513374816" outcome="login"/>
   <links id="pf14860703162703" target="pf14860703162706" source="pf148502513374816" outcome="fail"/>
   <links id="pf14860703162704" target="pf14860703162707" source="pf148502513374816" outcome="index"/>
