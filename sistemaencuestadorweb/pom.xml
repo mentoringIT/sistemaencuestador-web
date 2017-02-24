@@ -93,6 +93,13 @@
 			<artifactId>sistemaencuestadormodel</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars.bower/font-awesome -->
+		<dependency>
+			<groupId>org.webjars.bower</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>4.7.0</version>
+		</dependency>
+
 	</dependencies>
 
 

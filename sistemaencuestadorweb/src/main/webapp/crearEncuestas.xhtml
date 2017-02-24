@@ -14,14 +14,22 @@
 			<h:form>
 				<p:panel header="creación de encuestas" styleClass="contenedor">
 					<h:panelGrid>
+						
+						<div>
+							<p:outputLabel value="Fecha de aplicación" />
+							<p:calendar id="date" showOn="button" wigth="50px">
+							</p:calendar>
+						</div>
 						<p:outputLabel value="Curso" />
-						<p:selectOneMenu id="course"
-							filter="true" filterMatchMode="contains" height="100" wigth="50">
+						<p:selectOneMenu id="course" filter="true"
+							filterMatchMode="contains" height="100" wigth="50">
 
 							<f:selectItem itemLabel="--Seleccione Curso--" itemValue="0" />
 							<f:selectItems value="#{CourseList.listaC}" var="c"
 								itemValue="#{c.id}" itemLabel="#{c.name}" />
 						</p:selectOneMenu>
+
+
 
 					</h:panelGrid>
 

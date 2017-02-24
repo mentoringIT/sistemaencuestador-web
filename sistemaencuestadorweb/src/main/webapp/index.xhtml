@@ -7,24 +7,35 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<title>Sistema encuestador MentoringIT</title>
-	
-	<link rel="stylesheet" href="/sistemaencuestadorweb/css/cssFormulario.css" /> 	
-	
+
+	<link rel="stylesheet"
+		href="/sistemaencuestadorweb/css/cssFormulario.css" />
+
 </h:head>
 <h:body>
 	<h:form id="form" styleClass="center" style="width:350px;">
 		<p:panel id="panel" header="Sistema encuestador">
 			<h:panelGrid columns="2" cellpadding="5">
 				<h:outputLabel for="username" value="Usuario:" />
-				<p:inputText value="#{LoginUser.username}" placeholder="Usuario" id="username"
-					required="true" label="username" styleClass="password" />
-				<h:outputLabel for="password" value="Password:" match="clave2"/>
-				<p:password value="#{LoginUser.password}" placeholder="Password" id="password"
-					required="true" label="password" styleClass="password" />
+				<p:inputText value="#{LoginUser.username}" placeholder="Usuario"
+					id="username" required="true" label="username"
+					styleClass="password" />
+
+				<h:outputLabel for="password" value="Password:" match="clave2" />
+								<p:password value="#{LoginUser.password}" placeholder="Password" id="password"
+									required="true" label="password" styleClass="password" />
+<!-- 				<h:inputSecret id="passwordInput" value="#{LoginUser.password}" -->
+<!-- 					label="password" required="true" styleClass="password"> -->
+<!-- 					<f:validateRegex  -->
+<!-- 						pattern="[a-zA-Z0-9_]*[@]{1}[a-zA-Z0-9_]*[.]{1}[a-zA-Z]{2,3}" -->
+<!-- 						title="El formato debe coincidir con 3 letras mayúsculas y 4 números." /> -->
+<!-- 				</h:inputSecret> -->
 				<f:facet name="footer">
 					<p:commandButton id="loginButton" value="Entrar"
-						action="#{LoginUser.userLogin}" update="panel" outcome="welcome.xhtml"/>
+						action="#{LoginUser.userLogin}" update="panel"
+						outcome="welcome.xhtml" />
 				</f:facet>
+				<h:message for="passwordInput" style="color:red" />
 			</h:panelGrid>
 		</p:panel>
 	</h:form>

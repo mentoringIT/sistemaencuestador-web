@@ -9,15 +9,30 @@
 
 <h:body>
 	<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
-                template="plantilla.xhtml">
- 
-    <ui:define name="contenedor">
-       
-    </ui:define>
-    
-   
- 
-</ui:composition>
+		template="plantilla.xhtml">
+
+		<ui:define name="contenedor">
+			<div>
+				<form>
+					<p:panel header="contenedor de encuestas">
+
+						<p:panelGrid>
+							<p:commandButton type="button" title="Save" icon="fa fa-envelope" />
+							<p:commandButton type="button" title="Delete"
+								icon="fa fa-area-chart" />
+							<p:commandButton type="button" title="Print"
+								icon="fa fa-file-pdf-o" />
+							<p:commandButton icon="fa fa-pencil-square-o" type="button" />
+							<p:commandButton type="button" title="Print" icon="fa fa-times" />
+
+
+						</p:panelGrid>
+					</p:panel>
+				</form>
+			</div>
+		</ui:define>
+
+	</ui:composition>
 </h:body>
 
 </html>
